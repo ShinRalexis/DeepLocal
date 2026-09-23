@@ -8,16 +8,57 @@
 
 # ✨ What's new in 2.0
 
-- **New DeepL-style interface**: language bar above two joined panes, swap in the middle, light and dark theme that follows Windows (switched live).
-- **TranslateGemma 12B by default**: Google's translation model, prompted with its official format.
-- **All your Ollama models** in the model menu, read live from Ollama: installed models first, cloud models labelled, embedding models hidden.
-- **One-click download**: if TranslateGemma 12B is missing, the menu shows a Download button with progress (cancel any time, it resumes later).
-- **Translate as you type**, with text streaming in as the model writes it. Stop with Esc.
-- **Real auto-detect**: "Detect language" stays on and shows what it found, e.g. "Italian (detected)". If the text is already in the target language, DeepLocal switches the target for you.
-- **36 languages** (was 9), right-to-left for Arabic, Hebrew and Persian.
-- **Interface in English or Italian**, chosen by the installer and changeable in Settings.
-- **Clear errors with an action**: "Start Ollama", "Retry", "Open model menu" instead of HTTP codes.
-- Bug fixes: Alt+T now always brings the window back from the tray, the tray menu stays in sync, no more 100 s timeout on large models, Japanese is no longer detected as Chinese, parallel translations cannot overwrite each other, the window fits small or scaled screens.
+## Improvements
+
+### Interface
+
+- New DeepL-style layout: language bar above two joined panes, swap button in the middle, large readable text.
+- Light and dark theme that follows Windows and switches live; the title bar matches the navy header on Windows 11.
+- Interface in English or Italian, chosen by the installer and switchable in Settings without restarting.
+- Vector icons instead of emoji, thin scrollbars, keyboard focus rings, character counter, "Copied" feedback on the Copy button.
+- Clear errors with a button that fixes them: "Start Ollama", "Retry", "Open model menu" instead of HTTP codes.
+- Ollama status always visible (green or red dot) next to the model name and in the status bar.
+
+### Models
+
+- TranslateGemma 12B is the default model, prompted with its official translation format.
+- The model menu lists every model installed in Ollama, read live: local models first, cloud models labelled "Cloud", embedding models hidden.
+- If TranslateGemma 12B is missing, the menu shows a Download button with progress in MB and percent; downloads can be cancelled and resume later.
+- Models that "think" (deepseek-r1, qwen3, gpt-oss) run with thinking off or at minimum, so translations are faster.
+- The chosen model is remembered; if it is uninstalled, DeepLocal falls back to TranslateGemma or the first available model and says so.
+
+### Translation
+
+- Translate as you type (can be turned off in Settings), with the text streaming in while the model writes it.
+- Stop a translation with Esc or the Stop button; Ctrl+Enter translates immediately.
+- "Detect language" stays on and shows what it found, e.g. "Italian (detected)", instead of switching to a fixed language.
+- If the text is already in the target language, the target switches automatically (e.g. Italian text, target Italian: translates into English).
+- Choosing the same language on both sides swaps them, like DeepL.
+- 36 languages (was 9), including Portuguese, Polish, Dutch, Ukrainian, Arabic, Korean and Turkish; right-to-left for Arabic, Hebrew and Persian.
+- The swap button also swaps the texts, so the translation becomes the new source.
+- Cleaner output: removes quotes, code fences, "Translation:" labels, "END" markers and reasoning blocks some models add.
+
+### Windows integration
+
+- Start with Windows option in Settings and in the installer: DeepLocal starts hidden in the tray, ready for Alt+T.
+- Opening DeepLocal a second time brings the running window to the front instead of doing nothing.
+- The status bar warns at startup if Alt+T is already taken by another app.
+- Self-contained installers in English and Italian: no .NET install needed, they upgrade 1.0 in place and warn if Ollama is missing.
+- Settings are saved (model, languages, options) in `%APPDATA%\DeepLocal\settings.json`.
+
+## Bug fixes
+
+- Alt+T after closing the window with X translated in the background but the window stayed minimized and invisible: it now always reappears in front.
+- The tray menu kept "Open" disabled after the window was closed with X.
+- After the first auto-detection the source switched from "Auto" to the detected language for good, so the next text in another language was labelled wrong.
+- Japanese text starting with a kanji was detected as Chinese.
+- A detected language returned with punctuation (e.g. "Italian.") was rejected as unsupported.
+- Large models or slow first loads failed after 100 seconds (HTTP timeout).
+- Errors showed only an HTTP code; Ollama's real message (e.g. "model not found") was lost.
+- Pressing Alt+T during a translation started a second one in parallel and the results overwrote each other.
+- The 1200x720 window with 480 px minimum columns did not fit laptops with 150% scaling.
+- The README promised Portuguese and "Enter to translate", which the code did not do.
+- Build output (`bin/`, `obj/`) was not ignored by git.
 
 # 📦 Requirements
 
