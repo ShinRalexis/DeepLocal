@@ -1,21 +1,36 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <OutputType>WinExe</OutputType>
     <TargetFramework>net8.0-windows</TargetFramework>
     <UseWPF>true</UseWPF>
 
-    <!-- Imposta a true se vuoi la tray con System.Windows.Forms.NotifyIcon -->
+    <!-- Tray con System.Windows.Forms.NotifyIcon -->
     <UseWindowsForms>true</UseWindowsForms>
 
-    <!-- *** ICONA DELL’ESEGUIBILE *** -->
+    <!-- Icona dell'eseguibile -->
     <ApplicationIcon>Assets\DeepLocal_UserIcon_Framed.ico</ApplicationIcon>
 
     <RootNamespace>DeepLocal</RootNamespace>
     <Nullable>enable</Nullable>
+
+    <Version>2.0.0</Version>
+    <AssemblyVersion>2.0.0.0</AssemblyVersion>
+    <FileVersion>2.0.0.0</FileVersion>
+    <Product>DeepLocal</Product>
+    <Company>MetaDarko</Company>
+    <Copyright>Copyright (c) 2025-2026 MetaDarko</Copyright>
+    <Description>DeepLocal, offline translator powered by Ollama</Description>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
 
-  <!-- Copia l'icona accanto all'EXE (utile anche per la tray) -->
+  <!-- Icone e immagini incorporate (logo in testata, icona finestra) -->
+  <ItemGroup>
+    <Resource Include="Assets\DeepLocal_UserIcon_Framed.ico" />
+    <Resource Include="Assets\DeepLocal_UserIcon_Framed_64.png" />
+  </ItemGroup>
+
+  <!-- Copia l'icona accanto all'EXE (usata dalla tray) -->
   <ItemGroup>
     <Content Include="Assets\DeepLocal_UserIcon_Framed.ico">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

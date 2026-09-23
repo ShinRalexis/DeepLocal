@@ -1,0 +1,37 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <!-- Tema dark: stessi nomi in Light.xaml e Dark.xaml, usati con DynamicResource -->
+  <SolidColorBrush x:Key="HeaderBg" Color="#0E1727"/>
+  <SolidColorBrush x:Key="HeaderFg" Color="#FFFFFF"/>
+  <SolidColorBrush x:Key="HeaderMuted" Color="#A7B3C6"/>
+  <SolidColorBrush x:Key="HeaderHover" Color="#1B2740"/>
+  <SolidColorBrush x:Key="HeaderPressed" Color="#22304D"/>
+  <SolidColorBrush x:Key="HeaderChipBg" Color="#16223A"/>
+  <SolidColorBrush x:Key="HeaderChipBorder" Color="#2C3B5A"/>
+  <SolidColorBrush x:Key="WindowBg" Color="#0B1019"/>
+  <SolidColorBrush x:Key="Surface" Color="#141B27"/>
+  <SolidColorBrush x:Key="SurfaceAlt" Color="#111822"/>
+  <SolidColorBrush x:Key="Border" Color="#273142"/>
+  <SolidColorBrush x:Key="Divider" Color="#222B3A"/>
+  <SolidColorBrush x:Key="Ink" Color="#E7EBF2"/>
+  <SolidColorBrush x:Key="InkMuted" Color="#9CA7B8"/>
+  <SolidColorBrush x:Key="Placeholder" Color="#8591A3"/>
+  <SolidColorBrush x:Key="HoverBg" Color="#1C2533"/>
+  <SolidColorBrush x:Key="PressedBg" Color="#243044"/>
+  <SolidColorBrush x:Key="Accent" Color="#2F6FD0"/>
+  <SolidColorBrush x:Key="AccentHover" Color="#3A7CDD"/>
+  <SolidColorBrush x:Key="AccentPressed" Color="#2862BA"/>
+  <SolidColorBrush x:Key="AccentFg" Color="#FFFFFF"/>
+  <SolidColorBrush x:Key="AccentSoft" Color="#1A2A42"/>
+  <SolidColorBrush x:Key="AccentText" Color="#7AB0F5"/>
+  <SolidColorBrush x:Key="Danger" Color="#F97066"/>
+  <SolidColorBrush x:Key="DangerSoft" Color="#3A1D1F"/>
+  <SolidColorBrush x:Key="Success" Color="#4CC38A"/>
+  <SolidColorBrush x:Key="BadgeBg" Color="#1F2836"/>
+  <SolidColorBrush x:Key="BadgeFg" Color="#B8C2D1"/>
+  <SolidColorBrush x:Key="ScrollThumb" Color="#364154"/>
+  <SolidColorBrush x:Key="ScrollThumbHover" Color="#4A5669"/>
+  <SolidColorBrush x:Key="DisabledFg" Color="#6B7687"/>
+  <Color x:Key="ShadowColor">#000000</Color>
+  <SolidColorBrush x:Key="Transparent" Color="Transparent"/>
+</ResourceDictionary>

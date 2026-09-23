@@ -1,0 +1,37 @@
+<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <!-- Tema light: stessi nomi in Light.xaml e Dark.xaml, usati con DynamicResource -->
+  <SolidColorBrush x:Key="HeaderBg" Color="#0E1727"/>
+  <SolidColorBrush x:Key="HeaderFg" Color="#FFFFFF"/>
+  <SolidColorBrush x:Key="HeaderMuted" Color="#A7B3C6"/>
+  <SolidColorBrush x:Key="HeaderHover" Color="#1B2740"/>
+  <SolidColorBrush x:Key="HeaderPressed" Color="#22304D"/>
+  <SolidColorBrush x:Key="HeaderChipBg" Color="#16223A"/>
+  <SolidColorBrush x:Key="HeaderChipBorder" Color="#2C3B5A"/>
+  <SolidColorBrush x:Key="WindowBg" Color="#F2F4F7"/>
+  <SolidColorBrush x:Key="Surface" Color="#FFFFFF"/>
+  <SolidColorBrush x:Key="SurfaceAlt" Color="#F7F8FA"/>
+  <SolidColorBrush x:Key="Border" Color="#D9DEE6"/>
+  <SolidColorBrush x:Key="Divider" Color="#E3E7ED"/>
+  <SolidColorBrush x:Key="Ink" Color="#141C28"/>
+  <SolidColorBrush x:Key="InkMuted" Color="#566173"/>
+  <SolidColorBrush x:Key="Placeholder" Color="#646E7F"/>
+  <SolidColorBrush x:Key="HoverBg" Color="#EEF1F5"/>
+  <SolidColorBrush x:Key="PressedBg" Color="#E3E8EF"/>
+  <SolidColorBrush x:Key="Accent" Color="#1763C9"/>
+  <SolidColorBrush x:Key="AccentHover" Color="#1254AD"/>
+  <SolidColorBrush x:Key="AccentPressed" Color="#0F4892"/>
+  <SolidColorBrush x:Key="AccentFg" Color="#FFFFFF"/>
+  <SolidColorBrush x:Key="AccentSoft" Color="#E7F0FB"/>
+  <SolidColorBrush x:Key="AccentText" Color="#1459B5"/>
+  <SolidColorBrush x:Key="Danger" Color="#B42318"/>
+  <SolidColorBrush x:Key="DangerSoft" Color="#FDECEA"/>
+  <SolidColorBrush x:Key="Success" Color="#1B7F4E"/>
+  <SolidColorBrush x:Key="BadgeBg" Color="#EEF1F5"/>
+  <SolidColorBrush x:Key="BadgeFg" Color="#3D4757"/>
+  <SolidColorBrush x:Key="ScrollThumb" Color="#C3CAD4"/>
+  <SolidColorBrush x:Key="ScrollThumbHover" Color="#9AA3B0"/>
+  <SolidColorBrush x:Key="DisabledFg" Color="#8C95A3"/>
+  <Color x:Key="ShadowColor">#1A2433</Color>
+  <SolidColorBrush x:Key="Transparent" Color="Transparent"/>
+</ResourceDictionary>

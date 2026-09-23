@@ -1,0 +1,9 @@
+# Build .NET
+bin/
+obj/
+publish/
+*.user
+.vs/
+
+# Installer compilati
+installer/Output/
