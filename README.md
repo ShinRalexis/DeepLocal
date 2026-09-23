@@ -68,15 +68,25 @@
 
 No .NET install needed: the installer includes the runtime.
 
-# ⬇️ Download
+# ⬇️ Download Windows EXE
 
-Get the installers from the [Releases](https://github.com/ShinRalexis/DeepLocal/releases) page:
+### "DeepLocal 2.0" (latest release)
 
-- `DeepLocal_Setup_EN.exe`, English installer and interface
-- `DeepLocal_Setup_ITA.exe`, Italian installer and interface
+Get the DeepLocal Windows installers (ITA/ENG) from release v2.0.0:
+https://github.com/ShinRalexis/DeepLocal/releases/tag/v2.0.0
 
-Both upgrade an existing 1.0 installation in place. Verify them with `SHA256SUMS.txt`.
+| File | What it is |
+|---|---|
+| [DeepLocal_Setup_EN.exe](https://github.com/ShinRalexis/DeepLocal/releases/download/v2.0.0/DeepLocal_Setup_EN.exe) | English installer and interface (48 MB) |
+| [DeepLocal_Setup_ITA.exe](https://github.com/ShinRalexis/DeepLocal/releases/download/v2.0.0/DeepLocal_Setup_ITA.exe) | Italian installer and interface (48 MB) |
+| [SHA256SUMS.txt](https://github.com/ShinRalexis/DeepLocal/releases/download/v2.0.0/SHA256SUMS.txt) | Checksums to verify the downloads |
+
+Works on Windows 10/11 (64-bit). Requires Ollama running at http://127.0.0.1:11434.
+The installer adds Start menu shortcuts, an optional desktop icon and the optional Start with Windows (tray) option. It upgrades an existing 1.0 installation in place, and no .NET install is needed.
+
 SmartScreen may warn about an unsigned app: click **More info**, then **Run anyway**.
+
+Previous version: [DeepLocal 1.0.0](https://github.com/ShinRalexis/DeepLocal/releases/tag/v1.0.0)
 
 # 🧠 Models
 
