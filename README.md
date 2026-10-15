@@ -36,6 +36,15 @@
   <sub>DeepLocal 2.0.0 · Windows 10 and 11 (64-bit) · 48 MB installer · no .NET install needed · <a href="https://github.com/ShinRalexis/DeepLocal/releases">all releases</a></sub>
 </p>
 
+> [!NOTE]
+> **The problem it solves.** Online translators are fast and good, but every sentence you paste into
+> them is sent to someone else's servers, where it can be stored, logged or used under terms you do not
+> control. For a contract under negotiation, a patient's medical report, a confidential source or the
+> names of people at risk, that is not acceptable. DeepLocal gives you the same translate-as-you-type
+> workflow with the translation done **entirely on your PC**: the app talks only to Ollama on
+> `127.0.0.1`, keeps no history of what you translate, and once the model is downloaded it keeps working
+> with the network cable unplugged.
+
 <br>
 
 | Light theme | Dark theme |
@@ -48,6 +57,22 @@
 - **Feels like DeepL.** Two joined panes, language bar on top, swap in the middle, text that translates as you type.
 - **One key, from any app.** Copy some text, press **Alt+T** and the translation is ready, even with the window hidden in the tray.
 - **Any model you like.** TranslateGemma 12B by default, or any other model installed in Ollama, local or cloud.
+
+## Who it is for
+
+DeepLocal is meant for anyone who has to translate text that **must not leave the building**:
+
+- **Companies.** Contracts, offers, internal reports, HR files, unreleased product documents and correspondence with foreign partners, translated without uploading trade secrets to an external service and without asking IT for a new cloud provider to approve.
+- **Law firms and notaries.** Deeds, court documents and client communications covered by professional secrecy, where sending text to a third party could itself be a breach.
+- **Hospitals, clinics and doctors.** Medical records, discharge letters and test results of foreign patients, which are health data and among the most protected categories of personal data.
+- **Public administrations and institutions.** Citizens' applications, case files, police and immigration paperwork, and documents from foreign authorities that are classified or restricted to internal networks, including PCs with no internet access at all.
+- **Journalists.** Leaked documents, interviews and messages from sources, translated without leaving a copy on a server that could be subpoenaed, breached or monitored.
+- **Activists, human rights defenders and NGOs.** Testimonies, reports from people at risk, and communications in countries where online services may be watched or blocked: DeepLocal works on a laptop with no connection, so there is nothing to intercept on the way.
+- **Researchers and translators.** Unpublished papers, interview transcripts and manuscripts under NDA.
+
+> [!IMPORTANT]
+> All of this holds for **local models**, like the default TranslateGemma 12B. Models marked **Cloud** in the model menu run on Ollama's servers, so the text you translate with them leaves your PC: do not use them for sensitive material.
+> DeepLocal keeps your text off the network, but it does not protect a computer that is already compromised: for high-risk work, use it on a device you trust, with disk encryption.
 
 ## Features
 
