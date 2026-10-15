@@ -1,52 +1,102 @@
-![DeepLocal, light theme](docs/screenshot-light.png)
+<p align="center">
+  <img src="docs/banner.jpg" alt="DeepLocal" width="100%">
+</p>
 
-# DeepLocal, Offline Translator (WPF + Ollama)
+<h1 align="center">DeepLocal</h1>
 
-### DeepLocal brings the DeepL workflow to Windows, fully offline. Your text never leaves your PC: translations run on local models served by Ollama, with TranslateGemma 12B as the default.
+<p align="center">
+  <b>The DeepL workflow on Windows, fully offline.</b><br>
+  Your text never leaves your PC: translations run on local models served by Ollama, with TranslateGemma 12B as the default.
+</p>
 
-![DeepLocal, dark theme](docs/screenshot-dark.png)
+<p align="center">
+  <a href="https://github.com/ShinRalexis/DeepLocal/releases/latest"><img src="https://img.shields.io/github/v/release/ShinRalexis/DeepLocal?label=download&color=0E1727" alt="Latest release"></a>
+  <img src="https://img.shields.io/badge/Windows-10%20%7C%2011-0078D6?logo=windows" alt="Windows 10 and 11">
+  <img src="https://img.shields.io/badge/made%20with-C%23%20%2F%20WPF-512BD4?logo=dotnet&logoColor=white" alt="Made with C# and WPF">
+  <a href="https://ollama.com"><img src="https://img.shields.io/badge/runs%20on-Ollama-000000?logo=ollama&logoColor=white" alt="Runs on Ollama"></a>
+  <img src="https://img.shields.io/badge/languages-36-e04848" alt="36 languages">
+  <img src="https://img.shields.io/badge/100%25-offline-1763C9" alt="100% offline">
+  <a href="#license"><img src="https://img.shields.io/badge/license-MIT-green" alt="MIT license"></a>
+  <a href="https://liberapay.com/MetaDarko/donate"><img src="https://img.shields.io/liberapay/receives/MetaDarko?logo=liberapay&label=liberapay" alt="Liberapay"></a>
+</p>
 
-# ✨ What's new in 2.0
+<br>
 
-## Improvements
+<p align="center">
+  <a href="https://github.com/ShinRalexis/DeepLocal/releases/download/v2.0.0/DeepLocal_Setup_EN.exe">
+    <img src="https://img.shields.io/badge/⬇%20Download%20for%20Windows-English-0E1727?style=for-the-badge&labelColor=e04848" alt="Download DeepLocal 2.0.0, English" height="48">
+  </a>
+  &nbsp;
+  <a href="https://github.com/ShinRalexis/DeepLocal/releases/download/v2.0.0/DeepLocal_Setup_ITA.exe">
+    <img src="https://img.shields.io/badge/⬇%20Scarica%20per%20Windows-Italiano-0E1727?style=for-the-badge&labelColor=e04848" alt="Scarica DeepLocal 2.0.0, italiano" height="48">
+  </a>
+</p>
 
-### Interface
+<p align="center">
+  <sub>DeepLocal 2.0.0 · Windows 10 and 11 (64-bit) · 48 MB installer · no .NET install needed · <a href="https://github.com/ShinRalexis/DeepLocal/releases">all releases</a></sub>
+</p>
 
-- New DeepL-style layout: language bar above two joined panes, swap button in the middle, large readable text.
-- Light and dark theme that follows Windows and switches live; the title bar matches the navy header on Windows 11.
-- Interface in English or Italian, chosen by the installer and switchable in Settings without restarting.
-- Vector icons instead of emoji, thin scrollbars, keyboard focus rings, character counter, "Copied" feedback on the Copy button.
-- Clear errors with a button that fixes them: "Start Ollama", "Retry", "Open model menu" instead of HTTP codes.
-- Ollama status always visible (green or red dot) next to the model name and in the status bar.
+<br>
 
-### Models
+| Light theme | Dark theme |
+| :---: | :---: |
+| <img src="docs/screenshot-light.png" alt="DeepLocal, light theme"> | <img src="docs/screenshot-dark.png" alt="DeepLocal, dark theme"> |
 
-- TranslateGemma 12B is the default model, prompted with its official translation format.
-- The model menu lists every model installed in Ollama, read live: local models first, cloud models labelled "Cloud", embedding models hidden.
-- If TranslateGemma 12B is missing, the menu shows a Download button with progress in MB and percent; downloads can be cancelled and resume later.
-- Models that "think" (deepseek-r1, qwen3, gpt-oss) run with thinking off or at minimum, so translations are faster.
-- The chosen model is remembered; if it is uninstalled, DeepLocal falls back to TranslateGemma or the first available model and says so.
+## Why DeepLocal
+
+- **Private by design.** Nothing is sent to a server: the model runs on your machine through [Ollama](https://ollama.com).
+- **Feels like DeepL.** Two joined panes, language bar on top, swap in the middle, text that translates as you type.
+- **One key, from any app.** Copy some text, press **Alt+T** and the translation is ready, even with the window hidden in the tray.
+- **Any model you like.** TranslateGemma 12B by default, or any other model installed in Ollama, local or cloud.
+
+## Features
 
 ### Translation
 
-- Translate as you type (can be turned off in Settings), with the text streaming in while the model writes it.
-- Stop a translation with Esc or the Stop button; Ctrl+Enter translates immediately.
-- "Detect language" stays on and shows what it found, e.g. "Italian (detected)", instead of switching to a fixed language.
-- If the text is already in the target language, the target switches automatically (e.g. Italian text, target Italian: translates into English).
-- Choosing the same language on both sides swaps them, like DeepL.
-- 36 languages (was 9), including Portuguese, Polish, Dutch, Ukrainian, Arabic, Korean and Turkish; right-to-left for Arabic, Hebrew and Persian.
-- The swap button also swaps the texts, so the translation becomes the new source.
-- Cleaner output: removes quotes, code fences, "Translation:" labels, "END" markers and reasoning blocks some models add.
+- Translates as you type, with the text streaming in while the model writes it (can be turned off in Settings)
+- **36 languages**, including Portuguese, Polish, Dutch, Ukrainian, Arabic, Korean and Turkish; right-to-left layout for Arabic, Hebrew and Persian
+- "Detect language" stays on and shows what it found, for example *Italian (detected)*
+- If the text is already in the target language, the target switches by itself (Italian text with target Italian translates into English)
+- The swap button swaps languages **and** texts, so the translation becomes the new source
+- Clean output: quotes, code fences, "Translation:" labels and reasoning blocks some models add are removed
+
+### Model choice
+
+- **TranslateGemma 12B** is the default, prompted with its official translation format
+- The model menu lists every model installed in Ollama, read live: local models first, cloud models marked **Cloud**, embedding models hidden
+- Missing TranslateGemma? The menu shows a **Download** button with progress in MB and percent; downloads can be cancelled and resumed
+- Models that "think" (deepseek-r1, qwen3, gpt-oss) run with thinking off or at minimum, so translations are faster
+
+### Interface
+
+- Light and dark theme that follows Windows and switches live; on Windows 11 the title bar matches the navy header
+- Interface in **English or Italian**, switchable in Settings without restarting
+- Clear errors with a button that fixes them (**Start Ollama**, **Retry**, **Open model menu**) instead of HTTP codes
+- Ollama status always visible next to the model name, character counter, "Copied" feedback
 
 ### Windows integration
 
-- Start with Windows option in Settings and in the installer: DeepLocal starts hidden in the tray, ready for Alt+T.
-- Opening DeepLocal a second time brings the running window to the front instead of doing nothing.
-- The status bar warns at startup if Alt+T is already taken by another app.
-- Self-contained installers in English and Italian: no .NET install needed, they upgrade 1.0 in place and warn if Ollama is missing.
-- Settings are saved (model, languages, options) in `%APPDATA%\DeepLocal\settings.json`.
+- Lives in the tray and comes back with **Alt+T** or a click on the tray icon
+- Optional **Start with Windows**, hidden in the tray and ready for Alt+T
+- Opening DeepLocal a second time brings the running window to the front
+- Settings (model, languages, options) saved in `%APPDATA%\DeepLocal\settings.json`
 
-## Bug fixes
+<details>
+<summary><b>What's new in 2.0, and bugs fixed since 1.0</b></summary>
+
+### New in 2.0
+
+- New DeepL-style layout: language bar above two joined panes, swap button in the middle, large readable text.
+- Light and dark theme, interface in English or Italian, vector icons instead of emoji, thin scrollbars, keyboard focus rings.
+- TranslateGemma 12B as default model, with in-app download and live list of every Ollama model.
+- Translate as you type with streaming, Stop button and Esc, Ctrl+Enter to translate immediately.
+- 36 languages (was 9), right-to-left support.
+- Choosing the same language on both sides swaps them, like DeepL.
+- The chosen model is remembered; if it is uninstalled, DeepLocal falls back to TranslateGemma or the first available model and says so.
+- Start with Windows option, single instance, warning at startup if Alt+T is already taken by another app.
+- Self-contained installers in English and Italian: no .NET install needed, they upgrade 1.0 in place and warn if Ollama is missing.
+
+### Bugs fixed
 
 - Alt+T after closing the window with X translated in the background but the window stayed minimized and invisible: it now always reappears in front.
 - The tray menu kept "Open" disabled after the window was closed with X.
@@ -60,37 +110,26 @@
 - The README promised Portuguese and "Enter to translate", which the code did not do.
 - Build output (`bin/`, `obj/`) was not ignored by git.
 
-# 📦 Requirements
+</details>
 
-- Windows 10 (1809) or Windows 11, 64-bit
-- [Ollama](https://ollama.com/download/windows) running at http://127.0.0.1:11434
-- About 8 GB of disk for TranslateGemma 12B (downloaded from inside the app)
+## Install
 
-No .NET install needed: the installer includes the runtime.
+1. Install [Ollama for Windows](https://ollama.com/download/windows) and leave it running (it listens on `http://127.0.0.1:11434`).
+2. Download the installer with one of the buttons above: **[English](https://github.com/ShinRalexis/DeepLocal/releases/download/v2.0.0/DeepLocal_Setup_EN.exe)** or **[Italiano](https://github.com/ShinRalexis/DeepLocal/releases/download/v2.0.0/DeepLocal_Setup_ITA.exe)**.
+3. Run it. It adds Start menu shortcuts, an optional desktop icon and the optional Start with Windows option, and upgrades an existing 1.0 installation in place.
+4. Open DeepLocal: if TranslateGemma 12B is missing, click **Download** in the model menu (top right).
 
-# ⬇️ Download Windows EXE
+**Requirements:** Windows 10 (1809) or Windows 11, 64-bit, and about 8 GB of disk for TranslateGemma 12B.
 
-### "DeepLocal 2.0" (latest release)
-
-Get the DeepLocal Windows installers (ITA/ENG) from release v2.0.0:
-https://github.com/ShinRalexis/DeepLocal/releases/tag/v2.0.0
-
-| File | What it is |
-|---|---|
-| [DeepLocal_Setup_EN.exe](https://github.com/ShinRalexis/DeepLocal/releases/download/v2.0.0/DeepLocal_Setup_EN.exe) | English installer and interface (48 MB) |
-| [DeepLocal_Setup_ITA.exe](https://github.com/ShinRalexis/DeepLocal/releases/download/v2.0.0/DeepLocal_Setup_ITA.exe) | Italian installer and interface (48 MB) |
-| [SHA256SUMS.txt](https://github.com/ShinRalexis/DeepLocal/releases/download/v2.0.0/SHA256SUMS.txt) | Checksums to verify the downloads |
-
-Works on Windows 10/11 (64-bit). Requires Ollama running at http://127.0.0.1:11434.
-The installer adds Start menu shortcuts, an optional desktop icon and the optional Start with Windows (tray) option. It upgrades an existing 1.0 installation in place, and no .NET install is needed.
-
-SmartScreen may warn about an unsigned app: click **More info**, then **Run anyway**.
+> [!NOTE]
+> SmartScreen may warn about an unsigned app: click **More info**, then **Run anyway**.
+> To check the downloads, compare them with [SHA256SUMS.txt](https://github.com/ShinRalexis/DeepLocal/releases/download/v2.0.0/SHA256SUMS.txt).
 
 Previous version: [DeepLocal 1.0.0](https://github.com/ShinRalexis/DeepLocal/releases/tag/v1.0.0)
 
-# 🧠 Models
+## Models
 
-DeepLocal selects `translategemma:12b`. If it is not installed, open the model menu (top right) and click **Download**, or run:
+DeepLocal selects `translategemma:12b`. You can download it from the model menu or from a terminal:
 
 ```bash
 ollama pull translategemma:12b
@@ -98,19 +137,30 @@ ollama pull translategemma:12b
 
 Any other model installed in Ollama appears in the same menu (gemma3, aya-expanse, mistral, qwen3, gpt-oss...). Cloud models (`*-cloud`) work too, after `ollama signin`, and are marked **Cloud**.
 
-# ⌨️ Shortcuts
+## Keyboard shortcuts
 
-| Keys | Action |
-|---|---|
-| Alt+T | Translate the clipboard, from any app |
-| Ctrl+Enter | Translate now |
-| Esc | Stop the translation |
-| Click on the tray icon | Show the window |
-| Right click on the tray icon | Open, translate clipboard, hide, exit |
+| Action | Keys |
+| --- | --- |
+| Translate the clipboard, from any app | Alt+T |
+| Translate now | Ctrl+Enter |
+| Stop the translation | Esc |
+| Show the window | Click on the tray icon |
+| Open, translate clipboard, hide, exit | Right click on the tray icon |
 
 Closing or minimizing the window keeps DeepLocal in the tray, ready for Alt+T.
 
-# 🧑‍💻 Build from source
+## Troubleshooting
+
+| Problem | What to do |
+| --- | --- |
+| "Ollama is not responding" | Start Ollama (the error panel has a button for it), then click **Retry**. |
+| Model not found | Download it from the model menu, or run `ollama pull <model>`. |
+| Alt+T does nothing | Another app uses the same shortcut; the status bar says so at startup. Use the **Translate clipboard** button. |
+| Window not visible | Click the tray icon. |
+
+## Build from source
+
+Requires the [.NET 8 SDK](https://dotnet.microsoft.com/download/dotnet/8.0).
 
 ```bash
 git clone https://github.com/ShinRalexis/DeepLocal.git
@@ -118,57 +168,46 @@ cd DeepLocal
 dotnet run
 ```
 
-Requires the .NET 8 SDK. To build both installers (needs [Inno Setup 6](https://jrsoftware.org/isinfo.php)):
+To build both installers you also need [Inno Setup 6](https://jrsoftware.org/isinfo.php):
 
 ```powershell
 powershell -ExecutionPolicy Bypass -File installer\build.ps1
 ```
 
-Project layout:
+| Path | What it contains |
+| --- | --- |
+| `App.xaml(.cs)` | Tray, single instance, startup |
+| `MainWindow.xaml(.cs)` | The translator window |
+| [`Services/`](Services) | Ollama client, prompts and language detection, settings, UI strings (IT/EN), theme |
+| [`Themes/`](Themes) | `Light.xaml`, `Dark.xaml` (colours), `Controls.xaml` (styles) |
+| [`installer/`](installer) | Inno Setup script and build script |
+| [`docs/`](docs) | PRODUCT.md, DESIGN.md, screenshots |
 
-```text
-App.xaml(.cs)          tray, single instance, startup
-MainWindow.xaml(.cs)   the translator window
-Services/              Ollama client, prompts and language detection, settings, UI strings (IT/EN), theme
-Themes/                Light.xaml, Dark.xaml (colours), Controls.xaml (styles)
-installer/             Inno Setup script and build script
-docs/                  PRODUCT.md, DESIGN.md, screenshots
-```
+## Contributing
 
-# 🐞 Troubleshooting
+Fork the repo, create a `feat/feature-name` branch, keep the XAML style consistent (colours in `Themes/`, texts in `Services/Loc.cs`) and open a PR with a description and screenshots.
 
-- **"Ollama is not responding"**: start Ollama (the error panel has a button for it) and click Retry.
-- **Model not found**: download it from the model menu, or `ollama pull <model>`.
-- **Alt+T does nothing**: another app uses the same shortcut; the status bar says so at startup. Use the Translate clipboard button.
-- **Window not visible**: click the tray icon.
+For bugs or ideas, open an [Issue](https://github.com/ShinRalexis/DeepLocal/issues) with the app version, Windows version, steps and screenshots.
 
-# 🤝 Contributing
+## Support
 
-Fork, create a `feat/feature-name` branch, keep the XAML style consistent (colours in `Themes/`, texts in `Services/Loc.cs`), and open a PR with a description and screenshots.
+DeepLocal is free and open source. If it helps you, even $1 is a "hey friend, thanks!" ❤️
 
-# 📣 Support & Donations
+<p>
+  <a href="https://liberapay.com/MetaDarko/donate"><img src="docs/img/liberapay.png" alt="Donate on Liberapay"></a>
+  <a href="https://www.blockchain.com/explorer/addresses/btc/1NjV2CfyLw42Ej9UmZEcroyqnmmKMJNCUx"><img src="docs/img/bitcoin.png" alt="Donate with Bitcoin"></a>
+</p>
 
-If DeepLocal helps you, even $1 is a "hey friend, thanks!" ❤️
+Bitcoin address: `1NjV2CfyLw42Ej9UmZEcroyqnmmKMJNCUx`
 
-Liberapay: https://liberapay.com/MetaDarko/donate
+Made by [@MetaDarko](https://github.com/ShinRalexis).
 
-Bitcoin: [1NjV2CfyLw42Ej9UmZEcroyqnmmKMJNCUx](https://www.blockchain.com/explorer/addresses/btc/1NjV2CfyLw42Ej9UmZEcroyqnmmKMJNCUx)
+## License
 
-@MetaDarko: https://github.com/ShinRalexis
-
-For bugs or ideas open an Issue with app version, Windows version, steps and screenshots.
-
-# 📝 Licenses
-
-Code (MIT)
-Copyright © 2025-2026 MetaDarko.
+**Code: MIT.** Copyright © 2025-2026 MetaDarko.
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions: the above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED.
 
-Images/Assets (CC BY 4.0)
-The screenshots in /docs and the other graphic assets are © 2025-2026 MetaDarko and distributed under Creative Commons Attribution 4.0 International: you may use them freely, including commercially, provided that you attribute "MetaDarko DeepLocal" and indicate any changes.
-Full text: https://creativecommons.org/licenses/by/4.0/
-
-In short: the rights remain yours, but anyone can freely use the code and images (with attribution for assets).
+**Images and assets: CC BY 4.0.** The screenshots and graphics in `/docs` and the other graphic assets are © 2025-2026 MetaDarko, distributed under [Creative Commons Attribution 4.0 International](https://creativecommons.org/licenses/by/4.0/): you may use them freely, including commercially, provided that you credit "MetaDarko DeepLocal" and indicate any changes.
 
 TranslateGemma is a Google model distributed under the Gemma Terms of Use. DeepLocal is an independent project and is not affiliated with DeepL SE.
